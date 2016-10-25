@@ -2,8 +2,6 @@
 //  AppDelegate.swift
 //  circuito
 //
-//  Created by Hector Rincon on 10/24/16.
-//  Copyright © 2016 Hector Rincon. All rights reserved.
 //
 
 import UIKit

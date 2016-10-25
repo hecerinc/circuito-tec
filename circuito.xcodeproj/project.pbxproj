@@ -12,6 +12,8 @@
 		33DE2A151DBF091B00D27B3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DE2A131DBF091B00D27B3A /* Main.storyboard */; };
 		33DE2A171DBF091B00D27B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33DE2A161DBF091B00D27B3A /* Assets.xcassets */; };
 		33DE2A1A1DBF091B00D27B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DE2A181DBF091B00D27B3A /* LaunchScreen.storyboard */; };
+		33DE2A221DBFBB7D00D27B3A /* ParadasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DE2A211DBFBB7D00D27B3A /* ParadasViewController.swift */; };
+		33DE2A241DBFBE5D00D27B3A /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DE2A231DBFBE5D00D27B3A /* AppController.swift */; };
 		440252606697468601343014 /* libPods-circuito.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54725804E247328BE72963B6 /* libPods-circuito.a */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 		33DE2A161DBF091B00D27B3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33DE2A191DBF091B00D27B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33DE2A1B1DBF091B00D27B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33DE2A211DBFBB7D00D27B3A /* ParadasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParadasViewController.swift; sourceTree = "<group>"; };
+		33DE2A231DBFBE5D00D27B3A /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		54725804E247328BE72963B6 /* libPods-circuito.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-circuito.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC901EC9C7D681334833049F /* Pods-circuito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circuito.debug.xcconfig"; path = "Pods/Target Support Files/Pods-circuito/Pods-circuito.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,9 +68,11 @@
 				33DE2A0F1DBF091B00D27B3A /* AppDelegate.swift */,
 				33DE2A111DBF091B00D27B3A /* ViewController.swift */,
 				33DE2A131DBF091B00D27B3A /* Main.storyboard */,
+				33DE2A211DBFBB7D00D27B3A /* ParadasViewController.swift */,
 				33DE2A161DBF091B00D27B3A /* Assets.xcassets */,
 				33DE2A181DBF091B00D27B3A /* LaunchScreen.storyboard */,
 				33DE2A1B1DBF091B00D27B3A /* Info.plist */,
+				33DE2A231DBFBE5D00D27B3A /* AppController.swift */,
 			);
 			path = circuito;
 			sourceTree = "<group>";
@@ -213,6 +219,8 @@
 			files = (
 				33DE2A121DBF091B00D27B3A /* ViewController.swift in Sources */,
 				33DE2A101DBF091B00D27B3A /* AppDelegate.swift in Sources */,
+				33DE2A221DBFBB7D00D27B3A /* ParadasViewController.swift in Sources */,
+				33DE2A241DBFBE5D00D27B3A /* AppController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

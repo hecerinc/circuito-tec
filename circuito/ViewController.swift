@@ -2,7 +2,6 @@
 //  ViewController.swift
 //  circuito
 //
-//  Created by Hector Rincon on 10/24/16.
 //  Copyright © 2016 Hector Rincon. All rights reserved.
 //
 
@@ -10,7 +9,7 @@ import UIKit
 import GoogleMaps
 
 
-class ViewController: UIViewController {
+class ViewController: AppController {
 
     @IBOutlet weak var viewMap: GMSMapView!
     
@@ -35,6 +34,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
     }
 
 
