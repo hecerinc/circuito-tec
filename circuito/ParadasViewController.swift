@@ -15,8 +15,11 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var lbNombre: UILabel!
     @IBOutlet weak var lbDireccion: UILabel!
     
+    @IBOutlet weak var imaParada: UIImageView!
     
-    var ruta : Int = 1 // 0 ruta garza sada, 1 ruta hospitales
+    
+    
+    var ruta : Int = 0 // 0 ruta garza sada, 1 ruta hospitales
     var arrDictParadas : NSArray!
     
     var path = Bundle.main.path(forResource: "Property List Paradas", ofType: "plist")
@@ -24,11 +27,17 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imaParada.isHidden = true
+        
         if ruta == 1 { // ruta hospitales
             path = Bundle.main.path(forResource: "Property List Ruta Hosp", ofType: "plist")
         }
         
         arrDictParadas = NSArray(contentsOfFile: path!)
+        let dict = arrDictParadas[0] as! NSDictionary
+        lbNombre.text = dict.value(forKey: "nombre") as! String?
+        lbDireccion.text = dict.value(forKey: "direccion") as! String?
+       
         
         //myTableView.dataSource = self
       
@@ -55,9 +64,34 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
         cell.textLabel?.text = dict.value(forKey: "nombre") as! String?
         
         // dar formato a las celdas
+        
         cell.textLabel?.textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         cell.textLabel?.font = UIFont.systemFont(ofSize: 30.0)
+        
+        // color de las celdas
+        if indexPath.row % 5 == 0 {
+            // navy blue
+            cell.backgroundColor = UIColor(red: 64/255, green: 87/255, blue: 129/255, alpha: 1)
+        }
+        else if indexPath.row % 5 == 1 {
+            //light blue
+            cell.backgroundColor = UIColor(red: 93/255, green: 211/255, blue: 249/255, alpha: 1)
+        }
+        else if indexPath.row % 5 == 2 {
+            // light yellow
+            cell.backgroundColor = UIColor(red: 221/255, green: 215/255, blue: 118/255, alpha: 1)
+        }
+        else if indexPath.row % 5 == 3 {
+            // dark yellow
+            cell.backgroundColor = UIColor(red: 223/255, green: 207/255, blue: 9/255, alpha: 1)
+        }
+        else {
+            //orange
+            cell.backgroundColor = UIColor(red: 183/255, green: 133/255, blue: 46/255, alpha: 1)
+        }
+        
         return cell
+
     }
     
     // se llama cuando se selecciona un renglon del tableView
@@ -65,6 +99,39 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
         let dict = arrDictParadas[indexPath.row] as! NSDictionary
         lbNombre.text = dict.value(forKey: "nombre") as! String?
         lbDireccion.text = dict.value(forKey: "direccion") as! String?
+        
+        
+        // color de las celdas
+        if indexPath.row % 5 == 0 {
+            // navy blue
+            directionView.backgroundColor = UIColor(red: 64/255, green: 87/255, blue: 129/255, alpha: 1)
+        }
+        else if indexPath.row % 5 == 1 {
+            //light blue
+            directionView.backgroundColor = UIColor(red: 93/255, green: 211/255, blue: 249/255, alpha: 1)
+        }
+        else if indexPath.row % 5 == 2 {
+            // light yellow
+            directionView.backgroundColor = UIColor(red: 221/255, green: 215/255, blue: 118/255, alpha: 1)
+        }
+        else if indexPath.row % 5 == 3 {
+            // dark yellow
+            directionView.backgroundColor = UIColor(red: 223/255, green: 207/255, blue: 9/255, alpha: 1)
+        }
+        else {
+            //orange
+            directionView.backgroundColor = UIColor(red: 183/255, green: 133/255, blue: 46/255, alpha: 1)
+        }
+        
+        
+    }
+    
+    @IBAction func mostrarFoto(_ sender: UIButton) {
+        imaParada.isHidden = !imaParada.isHidden
+    }
+    
+    @IBAction func quitaFoto () {
+        imaParada.isHidden = true
     }
     
     
