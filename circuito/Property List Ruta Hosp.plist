@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>nombre</key>
+		<string>Lago de los Patos, Campus Monterrey (Inicio/Fin)</string>
+		<key>direccion</key>
+		<string>Av.</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Estación Metrorrey General I. Zaragoza</string>
+		<key>direccion</key>
+		<string>Av.2</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Gasolinera 2 de Abril</string>
+		<key>direccion</key>
+		<string>Av.2</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Centro Médico Zambrano Hellion (Presidencia)</string>
+		<key>direccion</key>
+		<string>Av.2</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>EGADE / EGOB</string>
+		<key>direccion</key>
+		<string>Av.2</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Farmacias Guadalajara (Río Nazas / Av. Lázaro Cárdenas)</string>
+		<key>direccion</key>
+		<string>Av.2</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Río Aguanaval (Facefood / Taller)</string>
+		<key>direccion</key>
+		<string>Av.2</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>OXXO Río Pánuco</string>
+		<key>direccion</key>
+		<string>Av.2</string>
+	</dict>
+</array>
+</plist>
