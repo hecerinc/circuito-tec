@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3383F1D31DCBE9D900A70DDC /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3383F1D21DCBE9D900A70DDC /* Globals.swift */; };
 		33DE2A101DBF091B00D27B3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DE2A0F1DBF091B00D27B3A /* AppDelegate.swift */; };
 		33DE2A121DBF091B00D27B3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DE2A111DBF091B00D27B3A /* ViewController.swift */; };
 		33DE2A151DBF091B00D27B3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DE2A131DBF091B00D27B3A /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0F507244AE70394263901BFE /* Pods-circuito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circuito.release.xcconfig"; path = "Pods/Target Support Files/Pods-circuito/Pods-circuito.release.xcconfig"; sourceTree = "<group>"; };
+		3383F1D21DCBE9D900A70DDC /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		33DE2A0C1DBF091B00D27B3A /* circuito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = circuito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33DE2A0F1DBF091B00D27B3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33DE2A111DBF091B00D27B3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			children = (
 				33DE2A0F1DBF091B00D27B3A /* AppDelegate.swift */,
 				33DE2A111DBF091B00D27B3A /* ViewController.swift */,
+				3383F1D21DCBE9D900A70DDC /* Globals.swift */,
 				33DE2A131DBF091B00D27B3A /* Main.storyboard */,
 				33DE2A271DBFD64900D27B3A /* LoginViewController.swift */,
 				33DE2A211DBFBB7D00D27B3A /* ParadasViewController.swift */,
@@ -230,6 +233,7 @@
 			files = (
 				33DE2A121DBF091B00D27B3A /* ViewController.swift in Sources */,
 				33DE2A101DBF091B00D27B3A /* AppDelegate.swift in Sources */,
+				3383F1D31DCBE9D900A70DDC /* Globals.swift in Sources */,
 				33DE2A221DBFBB7D00D27B3A /* ParadasViewController.swift in Sources */,
 				33DE2A281DBFD64900D27B3A /* LoginViewController.swift in Sources */,
 				33DE2A241DBFBE5D00D27B3A /* AppController.swift in Sources */,
