@@ -11,12 +11,20 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var directionView: UIView!
-    var paradas = ["Parada 1", "Parada 2", "Parada 3", "Parada 4", "Parada 5", "Parada 6"]
+    
+    @IBOutlet weak var lbNombre: UILabel!
+    @IBOutlet weak var lbDireccion: UILabel!
+    
+    
+    var arrDictParadas : NSArray!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        let path = Bundle.main.path(forResource: "Property List Paradas", ofType: "plist")
+        arrDictParadas = NSArray(contentsOfFile: path!)
+        
         //myTableView.dataSource = self
       
     }
@@ -30,15 +38,31 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return paradas.count
+        return arrDictParadas.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = String(indexPath.row + 1) + " " + paradas[indexPath.row]
+        
+        //pone valores a las celdas
+        let dict = arrDictParadas[indexPath.row] as! NSDictionary
+        //cell.textLabel?.text = "\((indexPath.row + 1)) \(dict.value(forKey: "nombre") as! String?)"
+        cell.textLabel?.text = dict.value(forKey: "nombre") as! String?
+        
+        // dar formato a las celdas
         cell.textLabel?.textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 45.0)
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 30.0)
         return cell
     }
+    
+    // se llama cuando se selecciona un renglon del tableView
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dict = arrDictParadas[indexPath.row] as! NSDictionary
+        lbNombre.text = dict.value(forKey: "nombre") as! String?
+        lbDireccion.text = dict.value(forKey: "direccion") as! String?
+
+    }
+    
     /*
     // MARK: - Navigation
 
