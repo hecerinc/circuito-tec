@@ -16,13 +16,18 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var lbDireccion: UILabel!
     
     
+    var ruta : Int = 1 // 0 ruta garza sada, 1 ruta hospitales
     var arrDictParadas : NSArray!
     
+    var path = Bundle.main.path(forResource: "Property List Paradas", ofType: "plist")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let path = Bundle.main.path(forResource: "Property List Paradas", ofType: "plist")
+        if ruta == 1 { // ruta hospitales
+            path = Bundle.main.path(forResource: "Property List Ruta Hosp", ofType: "plist")
+        }
+        
         arrDictParadas = NSArray(contentsOfFile: path!)
         
         //myTableView.dataSource = self
@@ -60,8 +65,8 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
         let dict = arrDictParadas[indexPath.row] as! NSDictionary
         lbNombre.text = dict.value(forKey: "nombre") as! String?
         lbDireccion.text = dict.value(forKey: "direccion") as! String?
-
     }
+    
     
     /*
     // MARK: - Navigation

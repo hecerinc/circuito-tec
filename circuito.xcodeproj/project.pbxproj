@@ -17,6 +17,7 @@
 		33DE2A281DBFD64900D27B3A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DE2A271DBFD64900D27B3A /* LoginViewController.swift */; };
 		440252606697468601343014 /* libPods-circuito.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54725804E247328BE72963B6 /* libPods-circuito.a */; };
 		FA0764591DCB1B24004D8E1A /* Property List Paradas.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA0764581DCB1B24004D8E1A /* Property List Paradas.plist */; };
+		FA07645B1DCB3B6E004D8E1A /* Property List Ruta Hosp.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA07645A1DCB3B6E004D8E1A /* Property List Ruta Hosp.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		33DE2A271DBFD64900D27B3A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		54725804E247328BE72963B6 /* libPods-circuito.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-circuito.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0764581DCB1B24004D8E1A /* Property List Paradas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List Paradas.plist"; sourceTree = "<group>"; };
+		FA07645A1DCB3B6E004D8E1A /* Property List Ruta Hosp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List Ruta Hosp.plist"; sourceTree = "<group>"; };
 		FC901EC9C7D681334833049F /* Pods-circuito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circuito.debug.xcconfig"; path = "Pods/Target Support Files/Pods-circuito/Pods-circuito.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 				33DE2A181DBF091B00D27B3A /* LaunchScreen.storyboard */,
 				33DE2A1B1DBF091B00D27B3A /* Info.plist */,
 				FA0764581DCB1B24004D8E1A /* Property List Paradas.plist */,
+				FA07645A1DCB3B6E004D8E1A /* Property List Ruta Hosp.plist */,
 				33DE2A231DBFBE5D00D27B3A /* AppController.swift */,
 			);
 			path = circuito;
@@ -164,6 +167,7 @@
 			files = (
 				33DE2A1A1DBF091B00D27B3A /* LaunchScreen.storyboard in Resources */,
 				33DE2A171DBF091B00D27B3A /* Assets.xcassets in Resources */,
+				FA07645B1DCB3B6E004D8E1A /* Property List Ruta Hosp.plist in Resources */,
 				FA0764591DCB1B24004D8E1A /* Property List Paradas.plist in Resources */,
 				33DE2A151DBF091B00D27B3A /* Main.storyboard in Resources */,
 			);
