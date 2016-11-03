@@ -23,9 +23,11 @@ class ViewController: AppController {
         
         let routePath = makeRoutePath()
         let polyLine = GMSPolyline(path: routePath)
-        polyLine.strokeWidth = 5.0
+        polyLine.strokeWidth = 3.0
         polyLine.strokeColor = UIColor.blue
         polyLine.map = viewMap
+        
+        // Add markers
         
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: 25.651431, longitude: -100.29106)
@@ -43,7 +45,14 @@ class ViewController: AppController {
         
         return path
     }
-
+    func buildStops () -> Void {
+        var marker : GMSMarker
+        for stop in paradas {
+            marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: stop.1, longitude: stop.0)
+            marker.map = viewMap
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
