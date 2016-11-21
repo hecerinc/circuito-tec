@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AEXML
 
 class ParadasViewController: AppController, UITableViewDelegate, UITableViewDataSource {
 
@@ -40,6 +41,16 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
        
         
         //myTableView.dataSource = self
+        
+        let html = "<kml xmlns='http://www.opengis.net/kml/2.2'> <Document> <name>Circuito Tec - Ruta Av. Garza Sada</name> <description><![CDATA[Salida inicial: El Lago de los Patos @1hora]]></description> <Folder> <name>Circuito Tec - Ruta Av. Garza Sada</name> <Placemark> <name>Tabla de Horarios (Entradas y Salidas)</name> <description><![CDATA[<img src=\"https://lh4.googleusercontent.com/proxy/Ovij-Mx8b-8_ar24aEPC2Hr3WNz3UMAcuAl7uypuhH8400nQQOIJ0Hb2jzFb4UwP8b16GsC37t3HC0QGoFfnIuM2IjTuS3BVkBLAmgxxpoxxfRpdUk3alZ3nX7YNDZk\" height=\"200\" width=\"auto\" /><br><br>http://expresotec.mty.itesm.mx/web/circuitotec/rutas.php]]></description> <styleUrl>#icon-ci-1</styleUrl> <ExtendedData> <Data name='gx_media_links'> <value>https://lh4.googleusercontent.com/proxy/Ovij-Mx8b-8_ar24aEPC2Hr3WNz3UMAcuAl7uypuhH8400nQQOIJ0Hb2jzFb4UwP8b16GsC37t3HC0QGoFfnIuM2IjTuS3BVkBLAmgxxpoxxfRpdUk3alZ3nX7YNDZk</value> </Data> </ExtendedData> <Point> <coordinates>-100.2932983,25.6500809,0.0</coordinates> </Point> </Placemark></Folder></Document> </kml>"
+        //var xmldoc : AEXMLDocument!
+        do {
+            let xmldoc = try AEXMLDocument(xml: html)
+            print(xmldoc.root["Document"]["name"].value!)
+        } catch{
+            print(error)
+        }
+    
       
     }
 

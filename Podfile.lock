@@ -1,4 +1,5 @@
 PODS:
+  - AEXML (4.0.1)
   - GoogleMaps (2.1.0):
     - GoogleMaps/Maps (= 2.1.0)
   - GoogleMaps/Base (2.1.0)
@@ -8,13 +9,15 @@ PODS:
     - GoogleMaps/Base (= 2.1.0)
 
 DEPENDENCIES:
+  - AEXML
   - GoogleMaps
   - GooglePlaces
 
 SPEC CHECKSUMS:
+  AEXML: 905e50474c0a261d335aa8be4ee32d22d69b6fd5
   GoogleMaps: 06589b9a38097bce0cd6e90f0fd9b5e4b4a9344c
   GooglePlaces: 16e96266483b8010e9f275399403647978523c86
 
-PODFILE CHECKSUM: 92d213ea790e54a2931e7956091679d1f83e1376
+PODFILE CHECKSUM: 57272940fb2eb803b6ea4b09076da1102e0dd43f
 
 COCOAPODS: 1.1.1
