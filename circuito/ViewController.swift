@@ -105,7 +105,7 @@ class ViewController: AppController {
                     marker.position = CLLocationCoordinate2D(latitude: arrLat[i], longitude: arrLong[i])
                     marker.title = "Circuito Tec"
                     marker.snippet = "Localizacion real"
-                    marker.icon = GMSMarker.markerImage(with: UIColor.blue)
+                    marker.icon = UIImage(named: "shuttle")
                     marker.map = self.viewMap
                     self.arrMarksCircuito.append(marker)
                 }
