@@ -87,11 +87,12 @@ class ViewController: AppController {
                 }
                 
                 // primero elimina los markers existentes luego repinta
-                for i in 0...self.arrMarksCircuito.count-1 {
-                    self.arrMarksCircuito[i].map = nil
-                    print("borrado exitoso")
-                }
-                if self.arrMarksCircuito.count > 0 {
+                if self.arrMarksCircuito != nil && self.arrMarksCircuito.count > 0 {
+                    for i in 0...self.arrMarksCircuito.count-1 {
+                        self.arrMarksCircuito[i].map = nil
+                        print("borrado exitoso")
+                    }
+                
                     self.arrMarksCircuito.removeAll()
                 }
                 
