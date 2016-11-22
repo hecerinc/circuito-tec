@@ -7,6 +7,8 @@
 
 import UIKit
 import GoogleMaps
+import Alamofire
+import AEXML
 
 
 class ViewController: AppController {
@@ -36,6 +38,9 @@ class ViewController: AppController {
         marker.map = viewMap
         buildStops()
         
+        // llama al web service 
+        uploadCircuito()
+        
     }
     func makeRoutePath() -> GMSMutablePath {
         let path = GMSMutablePath()
@@ -61,6 +66,23 @@ class ViewController: AppController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
+    }
+    
+    // funcion para llamar al web service
+    func uploadCircuito(){
+        Alamofire.request("http://ws.locatel.es/servicios/vehiculos/vehiculos.asmx/ListaVehiculos?usuario=tec1&password=tec1").responseString { response in
+            print("Success: \(response.result.isSuccess)")
+            //print("Response String: \(response.result.value!)")
+            do {
+                let xmldoc = try AEXMLDocument(xml: response.result.value!)
+                
+                print(xmldoc.root["diffgr:diffgram"]["Flota"]["coches"]["ult_latitud"].value!)
+                print(xmldoc.root["diffgr:diffgram"]["Flota"]["coches"]["ult_longitud"].value!)
+                //["DataSet"]["diffgr:diffgram"]["Flota"]["coches"]["ult_latitud"].value
+            } catch{
+                print(error)
+            }
+        }
     }
 
 
