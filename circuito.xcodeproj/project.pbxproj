@@ -16,10 +16,43 @@
 		33DE2A221DBFBB7D00D27B3A /* ParadasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DE2A211DBFBB7D00D27B3A /* ParadasViewController.swift */; };
 		33DE2A241DBFBE5D00D27B3A /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DE2A231DBFBE5D00D27B3A /* AppController.swift */; };
 		33DE2A281DBFD64900D27B3A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DE2A271DBFD64900D27B3A /* LoginViewController.swift */; };
-		440252606697468601343014 /* libPods-circuito.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54725804E247328BE72963B6 /* libPods-circuito.a */; };
+		A437AEE4C53179FCFF4D47F4 /* Pods_circuito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52AD0E7D41E48B191B58489 /* Pods_circuito.framework */; };
 		FA0764591DCB1B24004D8E1A /* Property List Paradas.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA0764581DCB1B24004D8E1A /* Property List Paradas.plist */; };
 		FA07645B1DCB3B6E004D8E1A /* Property List Ruta Hosp.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA07645A1DCB3B6E004D8E1A /* Property List Ruta Hosp.plist */; };
+		FA0F1C241DE3B91C0009CB51 /* SideMenu.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FA0F1C221DE3B85A0009CB51 /* SideMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA0F1C291DE3EB260009CB51 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F1C281DE3EB260009CB51 /* MenuTableViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA0F1C211DE3B85A0009CB51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA0F1C1D1DE3B85A0009CB51 /* SideMenu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 50B42F001A6A879C00B05352;
+			remoteInfo = SideMenu;
+		};
+		FA0F1C251DE3BDD10009CB51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA0F1C1D1DE3B85A0009CB51 /* SideMenu.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 50B42EFF1A6A879C00B05352;
+			remoteInfo = SideMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA0F1C231DE3B8E60009CB51 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FA0F1C241DE3B91C0009CB51 /* SideMenu.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0F507244AE70394263901BFE /* Pods-circuito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circuito.release.xcconfig"; path = "Pods/Target Support Files/Pods-circuito/Pods-circuito.release.xcconfig"; sourceTree = "<group>"; };
@@ -34,9 +67,11 @@
 		33DE2A211DBFBB7D00D27B3A /* ParadasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParadasViewController.swift; sourceTree = "<group>"; };
 		33DE2A231DBFBE5D00D27B3A /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		33DE2A271DBFD64900D27B3A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		54725804E247328BE72963B6 /* libPods-circuito.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-circuito.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52AD0E7D41E48B191B58489 /* Pods_circuito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_circuito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0764581DCB1B24004D8E1A /* Property List Paradas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List Paradas.plist"; sourceTree = "<group>"; };
 		FA07645A1DCB3B6E004D8E1A /* Property List Ruta Hosp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List Ruta Hosp.plist"; sourceTree = "<group>"; };
+		FA0F1C1D1DE3B85A0009CB51 /* SideMenu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SideMenu.xcodeproj; path = "Side-Menu.iOS/SideMenu.xcodeproj"; sourceTree = "<group>"; };
+		FA0F1C281DE3EB260009CB51 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		FC901EC9C7D681334833049F /* Pods-circuito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circuito.debug.xcconfig"; path = "Pods/Target Support Files/Pods-circuito/Pods-circuito.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				440252606697468601343014 /* libPods-circuito.a in Frameworks */,
+				A437AEE4C53179FCFF4D47F4 /* Pods_circuito.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +90,7 @@
 		33DE2A031DBF091B00D27B3A = {
 			isa = PBXGroup;
 			children = (
+				FA0F1C1D1DE3B85A0009CB51 /* SideMenu.xcodeproj */,
 				33DE2A0E1DBF091B00D27B3A /* circuito */,
 				33DE2A0D1DBF091B00D27B3A /* Products */,
 				D0B87CC6F31C3FBA640F62FF /* Pods */,
@@ -77,6 +113,7 @@
 				33DE2A111DBF091B00D27B3A /* ViewController.swift */,
 				3383F1D21DCBE9D900A70DDC /* Globals.swift */,
 				33DE2A131DBF091B00D27B3A /* Main.storyboard */,
+				FA0F1C281DE3EB260009CB51 /* MenuTableViewController.swift */,
 				33DE2A271DBFD64900D27B3A /* LoginViewController.swift */,
 				33DE2A211DBFBB7D00D27B3A /* ParadasViewController.swift */,
 				33DE2A161DBF091B00D27B3A /* Assets.xcassets */,
@@ -101,9 +138,17 @@
 		F1E8018D4B84915EB4589132 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				54725804E247328BE72963B6 /* libPods-circuito.a */,
+				B52AD0E7D41E48B191B58489 /* Pods_circuito.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA0F1C1E1DE3B85A0009CB51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA0F1C221DE3B85A0009CB51 /* SideMenu.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,10 +164,12 @@
 				33DE2A0A1DBF091B00D27B3A /* Resources */,
 				E830CEC7C8F128B31FF5E8DE /* [CP] Embed Pods Frameworks */,
 				51F5A0B72EEC0A9DDFB78CCA /* [CP] Copy Pods Resources */,
+				FA0F1C231DE3B8E60009CB51 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FA0F1C261DE3BDD10009CB51 /* PBXTargetDependency */,
 			);
 			name = circuito;
 			productName = circuito;
@@ -156,12 +203,28 @@
 			mainGroup = 33DE2A031DBF091B00D27B3A;
 			productRefGroup = 33DE2A0D1DBF091B00D27B3A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FA0F1C1E1DE3B85A0009CB51 /* Products */;
+					ProjectRef = FA0F1C1D1DE3B85A0009CB51 /* SideMenu.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				33DE2A0B1DBF091B00D27B3A /* circuito */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FA0F1C221DE3B85A0009CB51 /* SideMenu.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SideMenu.framework;
+			remoteRef = FA0F1C211DE3B85A0009CB51 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		33DE2A0A1DBF091B00D27B3A /* Resources */ = {
@@ -215,6 +278,7 @@
 			files = (
 			);
 			inputPaths = (
+				"${TARGET_BUILD_DIR}/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -232,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33DE2A121DBF091B00D27B3A /* ViewController.swift in Sources */,
+				FA0F1C291DE3EB260009CB51 /* MenuTableViewController.swift in Sources */,
 				33DE2A101DBF091B00D27B3A /* AppDelegate.swift in Sources */,
 				3383F1D31DCBE9D900A70DDC /* Globals.swift in Sources */,
 				33DE2A221DBFBB7D00D27B3A /* ParadasViewController.swift in Sources */,
@@ -241,6 +306,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA0F1C261DE3BDD10009CB51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SideMenu;
+			targetProxy = FA0F1C251DE3BDD10009CB51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		33DE2A131DBF091B00D27B3A /* Main.storyboard */ = {

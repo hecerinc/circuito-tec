@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class ParadasViewController: AppController, UITableViewDelegate, UITableViewDataSource {
 
@@ -18,11 +19,11 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var imaParada: UIImageView!
     
     
-    
     var ruta : Int = 0 // 0 ruta garza sada, 1 ruta hospitales
     var arrDictParadas : NSArray!
     
     var path = Bundle.main.path(forResource: "Property List Paradas", ofType: "plist")
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
