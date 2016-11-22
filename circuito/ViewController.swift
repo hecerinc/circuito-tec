@@ -34,12 +34,13 @@ class ViewController: AppController {
         marker.title = "Tec de Monterrey"
         marker.snippet = "Campus Monterrey"
         marker.map = viewMap
+        buildStops()
         
     }
     func makeRoutePath() -> GMSMutablePath {
         let path = GMSMutablePath()
         
-        for coord in mapCoords{
+        for coord in Globals.mapCoords{
             path.add(CLLocationCoordinate2D(latitude: coord.1, longitude: coord.0))
         }
         
@@ -47,7 +48,7 @@ class ViewController: AppController {
     }
     func buildStops () -> Void {
         var marker : GMSMarker
-        for stop in paradas {
+        for stop in Globals.paradas {
             marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: stop.1, longitude: stop.0)
             marker.map = viewMap

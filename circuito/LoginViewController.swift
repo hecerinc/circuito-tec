@@ -12,7 +12,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(Globals.resource_url)
+        print("HOLAAAAAAA")
+        print(Globals.resource_url)
         // Do any additional setup after loading the view.
     }
     

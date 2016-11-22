@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="1088.8" y="94.902548725637189"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="o6L-Sh-tlq">
             <objects>
-                <viewController id="PY1-Kl-ban" sceneMemberID="viewController">
+                <viewController id="PY1-Kl-ban" customClass="LoginViewController" customModule="circuito" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ioQ-oi-CWg"/>
                         <viewControllerLayoutGuide type="bottom" id="vKp-3N-R3q"/>
