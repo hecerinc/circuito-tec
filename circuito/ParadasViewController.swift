@@ -50,6 +50,10 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
         if currentVal == nav.selectedOption {
             return
         }
+        changeStopList()
+        
+    }
+    func changeStopList(){
         if nav.selectedOption == "Ruta Hospitales" {
             path = Bundle.main.path(forResource: "Property List Ruta Hosp", ofType: "plist")
         }
@@ -58,9 +62,12 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
         }
         arrDictParadas = NSArray(contentsOfFile: path!)
         myTableView.reloadData()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        changeStopList()
         
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
