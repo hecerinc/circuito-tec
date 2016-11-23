@@ -14,7 +14,7 @@ import AEXML
 class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var routeBtn: UIButton!
-    @IBOutlet weak var routePicker: UIPickerView!
+    @IBOutlet var routePicker: UIPickerView!
     @IBOutlet weak var viewMap: GMSMapView!
     var locationManager = CLLocationManager()
     var arrMarksCircuito = [GMSMarker]()
@@ -24,9 +24,13 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
     @IBOutlet weak var rutaBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        routePicker.layer.zPosition = 100
-        viewMap.layer.zPosition = 2
+        let vh = self.view.frame.height
+        routePicker = UIPickerView(frame: CGRect(x: 0, y: vh, width: self.view.frame.width, height: 100))
         routePicker.isHidden = true
+        routePicker.dataSource = self
+        routePicker.delegate = self
+        routePicker.backgroundColor = UIColor.white
+        self.view.addSubview(routePicker)
         // Do any additional setup after loading the view, typically from a nib.
         rutaBtn.layer.cornerRadius = 4
         let camera = GMSCameraPosition.camera(withLatitude: 25.651783081997173, longitude: -100.2932983, zoom: 14.0)
@@ -104,17 +108,17 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
         let currpos = routePicker.center
         let newpos = CGPoint(x: currpos.x, y: currpos.y+routePicker.frame.height)
         UIView.animate(withDuration: 0.2, animations: {self.routePicker.center = newpos}, completion: {(complete: Bool) in self.routePicker.isHidden = true})
+//        routePicker.isHidden = true
         
     }
     
     
     // funcion para llamar al web service
     func uploadCircuito() -> Void {
-        print(viewMap.myLocation)
         scheduledTimerWithTimeInterval()
         var arrLat = [Double]()
         var arrLong = [Double]()
-        Alamofire.request("http://ws.locatel.es/servicios/vehiculos/vehiculos.asmx/ListaVehiculos?usuario=tec1&password=tec1").responseString { response in
+        Alamofire.request(Globals.resource_gps_url).responseString { response in
             //print("Response String: \(response.result.value!)")
             do {
                 let xmldoc = try AEXMLDocument(xml: response.result.value!)
@@ -136,18 +140,12 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
                 
                 // repinta markers de circuito
                 for i in 0...arrLat.count-1 {
-                    //print("agregado")
-                    //print(arrLat[i])
-                    //print(arrLong[i])
                     let marker = GMSMarker()
                     marker.position = CLLocationCoordinate2D(latitude: arrLat[i], longitude: arrLong[i])
                     marker.icon = UIImage(named: "shuttle")
                     marker.map = self.viewMap
                     self.arrMarksCircuito.append(marker)
                 }
-                //print(xmldoc.root["diffgr:diffgram"]["Flota"]["coches"]["ult_latitud"].value!)
-                //print(xmldoc.root["diffgr:diffgram"]["Flota"]["coches"]["ult_longitud"].value!)
-                //["DataSet"]["diffgr:diffgram"]["Flota"]["coches"]["ult_latitud"].value
             } catch{
                 print(error)
             }
@@ -159,14 +157,13 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
         timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.uploadCircuito), userInfo: nil, repeats: true)
     }
     @IBAction func routeBtnClick(_ sender: UIButton) {
+        if !routePicker.isHidden {
+            return
+        }
         routePicker.isHidden = false
-        print("hello world this")
-        let h = routePicker.frame.height
         let currpos = routePicker.center
-        let newpos = CGPoint(x: currpos.x, y: currpos.y-h)
-        UIView.animate(withDuration: 0.2, animations: {
-            self.routePicker.center = newpos
-            }, completion: {(complete : Bool) in print(complete); print("end animation")})
+        let newpos = CGPoint(x: currpos.x, y: currpos.y-100)
+        UIView.animate(withDuration: 0.2, animations: {self.routePicker.center = newpos}, completion: nil)
     }
 
 

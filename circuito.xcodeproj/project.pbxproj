@@ -139,7 +139,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Hector Rincon";
 				TargetAttributes = {
 					33DE2A0B1DBF091B00D27B3A = {
