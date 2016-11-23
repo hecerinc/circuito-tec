@@ -27,7 +27,7 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Paradas";
         
         if ruta == 1 { // ruta hospitales
             path = Bundle.main.path(forResource: "Property List Ruta Hosp", ofType: "plist")

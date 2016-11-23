@@ -26,6 +26,7 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
         super.viewDidLoad()
         let vh = self.view.frame.height
         routePicker = UIPickerView(frame: CGRect(x: 0, y: vh, width: self.view.frame.width, height: 100))
+        self.title = "Mapa";
         routePicker.isHidden = true
         routePicker.dataSource = self
         routePicker.delegate = self
