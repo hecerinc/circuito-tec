@@ -12,43 +12,43 @@
 		<key>nombre</key>
 		<string>Estación Metrorrey General I. Zaragoza</string>
 		<key>direccion</key>
-		<string>Direccion: Calle Padre Mier</string>
+		<string>Calle Padre Mier (Mañana) / Juan Zuazua (Tarde)</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
-		<string>Gasolinera 2 de Abril</string>
+		<string>Hospital San José (EMIS)</string>
 		<key>direccion</key>
-		<string>Av.2</string>
+		<string>Calle Sertoma</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
 		<string>Centro Médico Zambrano Hellion (Presidencia)</string>
 		<key>direccion</key>
-		<string>Av.2</string>
+		<string></string>
 	</dict>
 	<dict>
 		<key>nombre</key>
 		<string>EGADE / EGOB</string>
 		<key>direccion</key>
-		<string>Direccion: Sertoma</string>
+		<string>Calle Rufino Tamayo</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
-		<string>Farmacias Guadalajara (Río Nazas / Av. Lázaro Cárdenas)</string>
+		<string>Farmacias Guadalajara</string>
 		<key>direccion</key>
-		<string>Av.2</string>
+		<string>Río Nazas / Av. Lázaro Cárdenas</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
 		<string>Río Aguanaval (Facefood / Taller)</string>
 		<key>direccion</key>
-		<string>Av.2</string>
+		<string>Calle Av. Luis Elizondo</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
 		<string>OXXO Río Pánuco</string>
 		<key>direccion</key>
-		<string>Av.2</string>
+		<string>Calle Río Pánuco</string>
 	</dict>
 </array>
 </plist>
