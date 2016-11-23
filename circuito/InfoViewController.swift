@@ -22,7 +22,33 @@ class InfoViewController: AppController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Información"
-        lbNomRuta.text = nav.selectedOption as! String!
+        lbHMTitle.text = "Horario:"
+        lbHMTime.text = "7:00 AM - 7:00 PM"
+        lbHVTitle.text = ""
+        lbHVTime.text = ""
+    }
+    
+    override func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let currOption = nav.selectedOption
+        super.pickerView(pickerView, didSelectRow: row, inComponent: component)
+        if nav.selectedOption == currOption {
+            return
+        }
+        lbNomRuta.text = nav.selectedOption
+        
+        if nav.selectedOption == "Ruta Garza Sada" {
+            lbHMTitle.text = "Horario:"
+            lbHMTime.text = "7:00 AM - 7:00 PM"
+            lbHVTitle.text = ""
+            lbHVTime.text = ""
+        }
+        else {
+            lbHMTitle.text = "Horario matutino:"
+            lbHMTime.text = "7:00 AM - 12:59 PM"
+            lbHVTitle.text = "Horario vespertino:"
+            lbHVTime.text = "1:00 PM - 7:00 PM"
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
