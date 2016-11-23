@@ -13,7 +13,7 @@ class MViewController: UIViewController {
     
     fileprivate var selectedIndex = 0
     fileprivate var transitionPoint: CGPoint!
-    fileprivate var contentType: ContentType = .Music
+    fileprivate var contentType: ContentType = .Mapa
     fileprivate var navigator: UINavigationController!
     
     lazy fileprivate var menuAnimator : MenuTransitionAnimator! = MenuTransitionAnimator(mode: .presentation, shouldPassEventsOutsideMenu: false) { [unowned self] in
@@ -43,7 +43,7 @@ extension MViewController: MenuViewControllerDelegate {
         transitionPoint = point
         selectedIndex = index
         
-        let content = storyboard!.instantiateViewController(withIdentifier: "Content") as! ContentViewController
+        let content = storyboard!.instantiateViewController(withIdentifier: "Content") as! ViewController
         content.type = contentType
         navigator.setViewControllers([content], animated: true)
         

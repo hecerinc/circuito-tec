@@ -22,6 +22,10 @@
 		FA0F1C241DE3B91C0009CB51 /* SideMenu.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FA0F1C221DE3B85A0009CB51 /* SideMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA0F1C291DE3EB260009CB51 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F1C281DE3EB260009CB51 /* MenuTableViewController.swift */; };
 		FA0F1C2B1DE4D0920009CB51 /* MViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F1C2A1DE4D0920009CB51 /* MViewController.swift */; };
+		FA0F1C311DE4FA4F0009CB51 /* CircularRevealTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F1C301DE4FA4F0009CB51 /* CircularRevealTransitionAnimator.swift */; };
+		FA0F1C331DE4FE250009CB51 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F1C321DE4FE250009CB51 /* ContentType.swift */; };
+		FA0F1C351DE50B500009CB51 /* CircularRevealAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F1C341DE50B500009CB51 /* CircularRevealAnimator.swift */; };
+		FA0F1C371DE50D170009CB51 /* AnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F1C361DE50D170009CB51 /* AnimationDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +78,10 @@
 		FA0F1C1D1DE3B85A0009CB51 /* SideMenu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SideMenu.xcodeproj; path = "Side-Menu.iOS/SideMenu.xcodeproj"; sourceTree = "<group>"; };
 		FA0F1C281DE3EB260009CB51 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		FA0F1C2A1DE4D0920009CB51 /* MViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MViewController.swift; sourceTree = "<group>"; };
+		FA0F1C301DE4FA4F0009CB51 /* CircularRevealTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularRevealTransitionAnimator.swift; sourceTree = "<group>"; };
+		FA0F1C321DE4FE250009CB51 /* ContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
+		FA0F1C341DE50B500009CB51 /* CircularRevealAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularRevealAnimator.swift; sourceTree = "<group>"; };
+		FA0F1C361DE50D170009CB51 /* AnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDelegate.swift; sourceTree = "<group>"; };
 		FC901EC9C7D681334833049F /* Pods-circuito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circuito.debug.xcconfig"; path = "Pods/Target Support Files/Pods-circuito/Pods-circuito.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,7 +124,11 @@
 				FA0F1C2A1DE4D0920009CB51 /* MViewController.swift */,
 				3383F1D21DCBE9D900A70DDC /* Globals.swift */,
 				33DE2A131DBF091B00D27B3A /* Main.storyboard */,
+				FA0F1C361DE50D170009CB51 /* AnimationDelegate.swift */,
+				FA0F1C301DE4FA4F0009CB51 /* CircularRevealTransitionAnimator.swift */,
+				FA0F1C341DE50B500009CB51 /* CircularRevealAnimator.swift */,
 				FA0F1C281DE3EB260009CB51 /* MenuTableViewController.swift */,
+				FA0F1C321DE4FE250009CB51 /* ContentType.swift */,
 				33DE2A271DBFD64900D27B3A /* LoginViewController.swift */,
 				33DE2A211DBFBB7D00D27B3A /* ParadasViewController.swift */,
 				33DE2A161DBF091B00D27B3A /* Assets.xcassets */,
@@ -300,11 +312,15 @@
 			files = (
 				33DE2A121DBF091B00D27B3A /* ViewController.swift in Sources */,
 				FA0F1C291DE3EB260009CB51 /* MenuTableViewController.swift in Sources */,
+				FA0F1C351DE50B500009CB51 /* CircularRevealAnimator.swift in Sources */,
 				33DE2A101DBF091B00D27B3A /* AppDelegate.swift in Sources */,
 				3383F1D31DCBE9D900A70DDC /* Globals.swift in Sources */,
+				FA0F1C371DE50D170009CB51 /* AnimationDelegate.swift in Sources */,
 				FA0F1C2B1DE4D0920009CB51 /* MViewController.swift in Sources */,
+				FA0F1C331DE4FE250009CB51 /* ContentType.swift in Sources */,
 				33DE2A221DBFBB7D00D27B3A /* ParadasViewController.swift in Sources */,
 				33DE2A281DBFD64900D27B3A /* LoginViewController.swift in Sources */,
+				FA0F1C311DE4FA4F0009CB51 /* CircularRevealTransitionAnimator.swift in Sources */,
 				33DE2A241DBFBE5D00D27B3A /* AppController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

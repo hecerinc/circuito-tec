@@ -11,6 +11,8 @@ import GoogleMaps
 
 class ViewController: AppController {
 
+    var type: ContentType = .Mapa
+    
     @IBOutlet weak var viewMap: GMSMapView!
     
     override func viewDidLoad() {
