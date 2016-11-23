@@ -14,8 +14,9 @@ class NavController: UINavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationBar.barTintColor = UIColor(red: 30/255, green: 97/255, blue: 204/255, alpha: 1)
+        self.navigationBar.barTintColor = UIColor(red: 0/255, green: 118/255, blue: 235/255, alpha: 1.0)
         self.navigationBar.tintColor = UIColor.white
+        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     }
 
     override func didReceiveMemoryWarning() {
