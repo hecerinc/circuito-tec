@@ -17,7 +17,6 @@ class ViewController: AppController, CLLocationManagerDelegate {
     
     @IBOutlet weak var viewMap: GMSMapView!
     var locationManager = CLLocationManager()
-    var selectedRoute = ""
     var arrMarksCircuito = [GMSMarker]()
     // llama al web service cada 2 segundos
     var timer = Timer()
@@ -90,9 +89,6 @@ class ViewController: AppController, CLLocationManagerDelegate {
         
         
     }
-    
-    
-    
     
     // funcion para llamar al web service
     func uploadCircuito() -> Void {

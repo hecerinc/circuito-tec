@@ -8,7 +8,9 @@ import UIKit
 
 class AppController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet var routePicker: UIPickerView!
+    //var selectedOption = ""
     @IBOutlet weak var routeBtn : UIButton!
+    var nav : NavController!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,14 +22,25 @@ class AppController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         routePicker.delegate = self
         routePicker.backgroundColor = UIColor.white
         routeBtn.layer.cornerRadius = 4
+        nav = tabBarController?.viewControllers?[0] as! NavController
         UIApplication.shared.keyWindow?.addSubview(routePicker)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let selectedOption = nav.selectedOption
+        if selectedOption != "" {
+            routeBtn.setTitle(selectedOption, for: UIControlState.normal)
+        }
+        else{
+            routeBtn.setTitle(Globals._rutas[0], for: UIControlState.normal)
+        }
+    }
     // MARK: - PickerView
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -43,6 +56,9 @@ class AppController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         //let navbar = barController[2] as! NavController
         //navbar.selectedOption = Globals._rutas[row]
         //selectedRoute = Globals._rutas[row]
+        nav.selectedOption = Globals._rutas[row]
+        //print("row changed")
+        //print(selectedOption)
         let currpos = routePicker.center
         let newpos = CGPoint(x: currpos.x, y: currpos.y+routePicker.frame.height)
         UIView.animate(withDuration: 0.2, animations: {self.routePicker.center = newpos}, completion: {(complete: Bool) in self.routePicker.isHidden = true})

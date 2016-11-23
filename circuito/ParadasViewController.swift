@@ -44,17 +44,7 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
         
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let mapview = barController[2] as! NavController
-        if mapview.selectedOption != "" {
-            routeBtn.setTitle(mapview.selectedOption, for: UIControlState.normal)
-
-        }
-        else{
-            routeBtn.setTitle(Globals._rutas[0], for: UIControlState.normal)
-        }
-    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
