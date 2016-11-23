@@ -12,7 +12,7 @@
 		<key>nombre</key>
 		<string>Estación Metrorrey General I. Zaragoza</string>
 		<key>direccion</key>
-		<string>Av.2</string>
+		<string>Direccion: Calle Padre Mier</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
@@ -30,7 +30,7 @@
 		<key>nombre</key>
 		<string>EGADE / EGOB</string>
 		<key>direccion</key>
-		<string>Av.2</string>
+		<string>Direccion: Sertoma</string>
 	</dict>
 	<dict>
 		<key>nombre</key>
