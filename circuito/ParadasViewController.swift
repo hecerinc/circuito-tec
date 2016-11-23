@@ -19,10 +19,11 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var imaParada: UIImageView!
     
     
+    @IBOutlet weak var routeBtn: UIButton!
     
     var ruta : Int = 0 // 0 ruta garza sada, 1 ruta hospitales
     var arrDictParadas : NSArray!
-    
+    var barController : [UIViewController]!
     var path = Bundle.main.path(forResource: "Property List Paradas", ofType: "plist")
     
     override func viewDidLoad() {
@@ -32,18 +33,28 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
         if ruta == 1 { // ruta hospitales
             path = Bundle.main.path(forResource: "Property List Ruta Hosp", ofType: "plist")
         }
-        
+        routeBtn.layer.cornerRadius = 4
         arrDictParadas = NSArray(contentsOfFile: path!)
         let dict = arrDictParadas[0] as! NSDictionary
         lbNombre.text = dict.value(forKey: "nombre") as! String?
         lbDireccion.text = dict.value(forKey: "direccion") as! String?
-       
+        barController = self.tabBarController?.viewControllers
         
         //myTableView.dataSource = self
         
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let mapview = barController[2] as! NavController
+        if mapview.selectedOption != "" {
+            routeBtn.setTitle(mapview.selectedOption, for: UIControlState.normal)
 
+        }
+        else{
+            routeBtn.setTitle(Globals._rutas[0], for: UIControlState.normal)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,7 +63,6 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return arrDictParadas.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

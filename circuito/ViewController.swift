@@ -17,11 +17,11 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
     @IBOutlet var routePicker: UIPickerView!
     @IBOutlet weak var viewMap: GMSMapView!
     var locationManager = CLLocationManager()
+    var selectedRoute = ""
     var arrMarksCircuito = [GMSMarker]()
     // llama al web service cada 2 segundos
     var timer = Timer()
-    
-    @IBOutlet weak var rutaBtn: UIButton!
+    var barController : [UIViewController]!
     override func viewDidLoad() {
         super.viewDidLoad()
         let vh = self.view.frame.height
@@ -31,9 +31,12 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
         routePicker.dataSource = self
         routePicker.delegate = self
         routePicker.backgroundColor = UIColor.white
-        self.view.addSubview(routePicker)
+        UIApplication.shared.keyWindow?.addSubview(routePicker)
+        //self.view.addSubview(routePicker)
+        //self.view.bringSubview(toFront: routePicker)
+        //self.navigationController?.view.addSubview(routePicker)
         // Do any additional setup after loading the view, typically from a nib.
-        rutaBtn.layer.cornerRadius = 4
+        routeBtn.layer.cornerRadius = 4
         let camera = GMSCameraPosition.camera(withLatitude: 25.651783081997173, longitude: -100.2932983, zoom: 14.0)
         //let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         viewMap.isMyLocationEnabled = true
@@ -50,6 +53,9 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
         marker.map = viewMap
         //buildStops()
         uploadCircuito()
+        barController = tabBarController?.viewControllers
+        
+        
     }
     
     //Location Manager delegates
@@ -64,16 +70,12 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
         self.locationManager.stopUpdatingLocation()
         
     }
-    
 
-    
     func makeRoutePath() -> GMSMutablePath {
         let path = GMSMutablePath()
-        
         for coord in Globals.mapCoords{
             path.add(CLLocationCoordinate2D(latitude: coord.1, longitude: coord.0))
         }
-        
         return path
     }
     
@@ -106,10 +108,12 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         routeBtn.setTitle(Globals._rutas[row], for: UIControlState.normal)
+        let navbar = barController[2] as! NavController
+        navbar.selectedOption = Globals._rutas[row]
+        selectedRoute = Globals._rutas[row]
         let currpos = routePicker.center
         let newpos = CGPoint(x: currpos.x, y: currpos.y+routePicker.frame.height)
         UIView.animate(withDuration: 0.2, animations: {self.routePicker.center = newpos}, completion: {(complete: Bool) in self.routePicker.isHidden = true})
-//        routePicker.isHidden = true
         
     }
     
@@ -166,6 +170,7 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
         let newpos = CGPoint(x: currpos.x, y: currpos.y-100)
         UIView.animate(withDuration: 0.2, animations: {self.routePicker.center = newpos}, completion: nil)
     }
+    
 
 
 }

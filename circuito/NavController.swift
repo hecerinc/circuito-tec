@@ -9,7 +9,7 @@
 import UIKit
 
 class NavController: UINavigationController {
-
+    var selectedOption : String! = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 

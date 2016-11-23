@@ -82,9 +82,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                         <state key="normal" title="Ruta Garza Sada"/>
-                                        <connections>
-                                            <action selector="routeBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lAi-eP-c7h"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.090196078430000007" green="0.40000000000000002" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -116,6 +113,7 @@
                         <outlet property="lbDireccion" destination="xYg-d7-rJh" id="E6d-fg-1FX"/>
                         <outlet property="lbNombre" destination="NsC-SG-ymO" id="FsW-KZ-lsb"/>
                         <outlet property="myTableView" destination="R8W-CI-bwF" id="L4Z-Ia-tW6"/>
+                        <outlet property="routeBtn" destination="DaI-V5-iAg" id="naP-8t-gA4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvc-JZ-5XN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -243,12 +241,6 @@
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miH-CI-yQ0" customClass="GMSMapView">
                                 <frame key="frameInset" minY="268" width="375" height="399"/>
-                                <subviews>
-                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bm9-PM-BpX">
-                                        <frame key="frameInset" minY="452" height="216"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    </pickerView>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -269,8 +261,6 @@
                     <navigationItem key="navigationItem" id="gbC-LW-XRp"/>
                     <connections>
                         <outlet property="routeBtn" destination="fGm-6r-RGM" id="CIm-0O-Evm"/>
-                        <outlet property="routePicker" destination="Bm9-PM-BpX" id="LHN-jM-Tr0"/>
-                        <outlet property="rutaBtn" destination="fGm-6r-RGM" id="88r-lg-PjN"/>
                         <outlet property="viewMap" destination="miH-CI-yQ0" id="KZo-ZQ-qha"/>
                     </connections>
                 </viewController>
@@ -315,7 +305,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xmk-tp-QM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="382" y="775"/>
+            <point key="canvasLocation" x="382" y="795"/>
         </scene>
         <!--Mapa-->
         <scene sceneID="xjv-Aq-iLC">
@@ -323,7 +313,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aYV-YJ-FhB" customClass="NavController" customModule="circuito" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mapa" image="tracker" id="0vt-bp-NZk"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DYG-W8-Jfr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DYG-W8-Jfr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
