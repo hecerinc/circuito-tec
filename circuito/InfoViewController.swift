@@ -10,7 +10,7 @@ import UIKit
 
 class InfoViewController: AppController {
     
-    @IBOutlet weak var routeBtn: UIButton!
+    //@IBOutlet weak var routeBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Información"

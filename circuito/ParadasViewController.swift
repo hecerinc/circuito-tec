@@ -19,7 +19,7 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var imaParada: UIImageView!
     
     
-    @IBOutlet weak var routeBtn: UIButton!
+    //@IBOutlet weak var routeBtn: UIButton!
     
     var ruta : Int = 0 // 0 ruta garza sada, 1 ruta hospitales
     var arrDictParadas : NSArray!

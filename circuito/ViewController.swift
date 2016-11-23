@@ -11,10 +11,10 @@ import Alamofire
 import AEXML
 
 
-class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegate, CLLocationManagerDelegate {
+class ViewController: AppController, CLLocationManagerDelegate {
 
-    @IBOutlet weak var routeBtn: UIButton!
-    @IBOutlet var routePicker: UIPickerView!
+    //@IBOutlet weak var routeBtn: UIButton!
+    
     @IBOutlet weak var viewMap: GMSMapView!
     var locationManager = CLLocationManager()
     var selectedRoute = ""
@@ -24,19 +24,14 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
     var barController : [UIViewController]!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let vh = self.view.frame.height
-        routePicker = UIPickerView(frame: CGRect(x: 0, y: vh, width: self.view.frame.width, height: 100))
-        self.title = "Mapa";
-        routePicker.isHidden = true
-        routePicker.dataSource = self
-        routePicker.delegate = self
-        routePicker.backgroundColor = UIColor.white
-        UIApplication.shared.keyWindow?.addSubview(routePicker)
+        
+        self.title = "Mapa"
+        
         //self.view.addSubview(routePicker)
         //self.view.bringSubview(toFront: routePicker)
         //self.navigationController?.view.addSubview(routePicker)
         // Do any additional setup after loading the view, typically from a nib.
-        routeBtn.layer.cornerRadius = 4
+        
         let camera = GMSCameraPosition.camera(withLatitude: 25.651783081997173, longitude: -100.2932983, zoom: 14.0)
         //let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         viewMap.isMyLocationEnabled = true
@@ -96,26 +91,7 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
         
     }
     
-    // MARK: - PickerView
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return Globals._rutas.count
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return Globals._rutas[row]
-    }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        routeBtn.setTitle(Globals._rutas[row], for: UIControlState.normal)
-        let navbar = barController[2] as! NavController
-        navbar.selectedOption = Globals._rutas[row]
-        selectedRoute = Globals._rutas[row]
-        let currpos = routePicker.center
-        let newpos = CGPoint(x: currpos.x, y: currpos.y+routePicker.frame.height)
-        UIView.animate(withDuration: 0.2, animations: {self.routePicker.center = newpos}, completion: {(complete: Bool) in self.routePicker.isHidden = true})
-        
-    }
+    
     
     
     // funcion para llamar al web service
@@ -161,15 +137,7 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
         // Scheduling timer to Call the function **Countdown** with the interval of 1 seconds
         timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.uploadCircuito), userInfo: nil, repeats: true)
     }
-    @IBAction func routeBtnClick(_ sender: UIButton) {
-        if !routePicker.isHidden {
-            return
-        }
-        routePicker.isHidden = false
-        let currpos = routePicker.center
-        let newpos = CGPoint(x: currpos.x, y: currpos.y-100)
-        UIView.animate(withDuration: 0.2, animations: {self.routePicker.center = newpos}, completion: nil)
-    }
+    
     
 
 

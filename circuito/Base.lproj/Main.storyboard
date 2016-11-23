@@ -84,6 +84,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                         <state key="normal" title="Ruta Garza Sada"/>
+                                        <connections>
+                                            <action selector="routeBtnClick:" destination="UBY-0i-Yf0" eventType="touchUpInside" id="nUl-4K-EQh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.090196078430000007" green="0.40000000000000002" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -115,7 +118,7 @@
                         <outlet property="lbDireccion" destination="xYg-d7-rJh" id="E6d-fg-1FX"/>
                         <outlet property="lbNombre" destination="NsC-SG-ymO" id="FsW-KZ-lsb"/>
                         <outlet property="myTableView" destination="R8W-CI-bwF" id="L4Z-Ia-tW6"/>
-                        <outlet property="routeBtn" destination="DaI-V5-iAg" id="naP-8t-gA4"/>
+                        <outlet property="routeBtn" destination="DaI-V5-iAg" id="blf-E6-rZr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvc-JZ-5XN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -229,7 +232,7 @@
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                         <state key="normal" title="Ruta Garza Sada"/>
                                         <connections>
-                                            <action selector="routeBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fB2-19-sXJ"/>
+                                            <action selector="routeBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gbf-gI-Fsu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -262,7 +265,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gbC-LW-XRp"/>
                     <connections>
-                        <outlet property="routeBtn" destination="fGm-6r-RGM" id="CIm-0O-Evm"/>
+                        <outlet property="routeBtn" destination="fGm-6r-RGM" id="SMh-jm-8sk"/>
                         <outlet property="viewMap" destination="miH-CI-yQ0" id="KZo-ZQ-qha"/>
                     </connections>
                 </viewController>
@@ -393,7 +396,7 @@
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                         <state key="normal" title="Ruta Garza Sada"/>
                                         <connections>
-                                            <action selector="routeBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dr5-MH-yhO"/>
+                                            <action selector="routeBtnClick:" destination="0VF-HY-aH0" eventType="touchUpInside" id="pXl-Fv-Iaf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -455,7 +458,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ASj-EU-hVh"/>
                     <connections>
-                        <outlet property="routeBtn" destination="UkD-Gc-DGi" id="aIx-EL-NHI"/>
+                        <outlet property="routeBtn" destination="UkD-Gc-DGi" id="yYc-SP-3gC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcO-VL-nzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
