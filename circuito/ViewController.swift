@@ -16,6 +16,7 @@ class ViewController: AppController, CLLocationManagerDelegate {
     //@IBOutlet weak var routeBtn: UIButton!
     
     @IBOutlet weak var viewMap: GMSMapView!
+    //var name = "Rutas"
     var locationManager = CLLocationManager()
     var arrMarksCircuito = [GMSMarker]()
     // llama al web service cada 2 segundos
@@ -30,6 +31,9 @@ class ViewController: AppController, CLLocationManagerDelegate {
         //self.view.bringSubview(toFront: routePicker)
         //self.navigationController?.view.addSubview(routePicker)
         // Do any additional setup after loading the view, typically from a nib.
+        
+        drawNewRoute(route: nav.selectedOption)
+        
         
         let camera = GMSCameraPosition.camera(withLatitude: 25.651783081997173, longitude: -100.2932983, zoom: 14.0)
         //let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
@@ -49,6 +53,43 @@ class ViewController: AppController, CLLocationManagerDelegate {
         //uploadCircuito()
         barController = tabBarController?.viewControllers
         
+        
+    }
+    override func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let currOption = nav.selectedOption
+        super.pickerView(pickerView, didSelectRow: row, inComponent: component)
+        if nav.selectedOption == currOption {
+                return
+        }
+        clearMap()
+        drawNewRoute(route: nav.selectedOption)
+        
+    }
+    func clearMap(){
+        // remove markers and route
+        // position at center of tec
+        viewMap.clear()
+    }
+    func drawNewRoute(route : String){
+        
+        let Rpath = GMSMutablePath()
+        var coords : [(Double, Double)]
+        var c : UIColor
+        if route == "Ruta Hospitales"{
+            coords = Globals.rutaHosp
+            c = UIColor.red
+        }
+        else{
+            coords = Globals.mapCoords
+            c = UIColor.blue
+        }
+        for coord in coords {
+            Rpath.add(CLLocationCoordinate2D(latitude: coord.1, longitude: coord.0))
+        }
+        let polyLine = GMSPolyline(path: Rpath)
+        polyLine.strokeWidth = 3.0
+        polyLine.strokeColor = c
+        polyLine.map = viewMap
         
     }
     

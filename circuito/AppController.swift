@@ -8,9 +8,9 @@ import UIKit
 
 class AppController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet var routePicker: UIPickerView!
-    //var selectedOption = ""
     @IBOutlet weak var routeBtn : UIButton!
     var nav : NavController!
+    //var name: String!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,15 +53,11 @@ class AppController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         routeBtn.setTitle(Globals._rutas[row], for: UIControlState.normal)
-        //let navbar = barController[2] as! NavController
-        //navbar.selectedOption = Globals._rutas[row]
-        //selectedRoute = Globals._rutas[row]
         nav.selectedOption = Globals._rutas[row]
-        //print("row changed")
-        //print(selectedOption)
         let currpos = routePicker.center
         let newpos = CGPoint(x: currpos.x, y: currpos.y+routePicker.frame.height)
         UIView.animate(withDuration: 0.2, animations: {self.routePicker.center = newpos}, completion: {(complete: Bool) in self.routePicker.isHidden = true})
+        
         
     }
     @IBAction func routeBtnClick(_ sender: UIButton) {
