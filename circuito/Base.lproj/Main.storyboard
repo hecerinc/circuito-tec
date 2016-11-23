@@ -24,7 +24,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64a-TX-faP">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="64a-TX-faP">
+                                <frame key="frameInset" minY="141" width="375" height="187"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-SG-ymO">
                                         <constraints>
@@ -55,7 +56,8 @@
                                     <outletCollection property="gestureRecognizers" destination="cvd-HP-lKT" appends="YES" id="VlB-1n-xHP"/>
                                 </connections>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R8W-CI-bwF">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R8W-CI-bwF">
+                                <frame key="frameInset" minY="336" width="375" height="282"/>
                                 <color key="backgroundColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="82" id="rQM-YR-bW5">
@@ -119,7 +121,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvc-JZ-5XN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="cvd-HP-lKT"/>
             </objects>
-            <point key="canvasLocation" x="1266" y="1022"/>
+            <point key="canvasLocation" x="1264.8" y="1021.4392803598201"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="o6L-Sh-tlq">
@@ -294,7 +296,7 @@
                     <tabBarItem key="tabBarItem" title="Paradas" image="busStop" id="nJe-KM-Z9z"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="dxR-RC-pR3"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yFC-Vb-FAl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yFC-Vb-FAl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -313,7 +315,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aYV-YJ-FhB" customClass="NavController" customModule="circuito" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mapa" image="tracker" id="0vt-bp-NZk"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DYG-W8-Jfr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DYG-W8-Jfr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -338,7 +340,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de la ruta" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EK-1x-ddq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ruta Garza Sada" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EK-1x-ddq">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="106" id="crS-vc-hyT"/>
                                 </constraints>
@@ -466,7 +468,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UdD-LX-B4W" customClass="NavController" customModule="circuito" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Infomación" image="info" id="JJn-8q-OmF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RA8-rJ-LGW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RA8-rJ-LGW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
