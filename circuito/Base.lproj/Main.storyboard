@@ -288,9 +288,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="nvT-8E-1rw" kind="relationship" relationship="viewControllers" id="Llr-E1-TDe"/>
-                        <segue destination="aYV-YJ-FhB" kind="relationship" relationship="viewControllers" id="4OE-br-1nl"/>
                         <segue destination="UdD-LX-B4W" kind="relationship" relationship="viewControllers" id="5Ur-Yq-MnI"/>
+                        <segue destination="aYV-YJ-FhB" kind="relationship" relationship="viewControllers" id="4OE-br-1nl"/>
+                        <segue destination="nvT-8E-1rw" kind="relationship" relationship="viewControllers" id="Llr-E1-TDe"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35W-lR-FMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
