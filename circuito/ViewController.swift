@@ -24,6 +24,7 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
     @IBOutlet weak var rutaBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Mapa";
         routePicker.layer.zPosition = 100
         viewMap.layer.zPosition = 2
         routePicker.isHidden = true

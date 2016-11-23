@@ -19,6 +19,9 @@
 		8BD022411CDE5B005507C320 /* Pods_circuito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E003EBCF1E498589F44EC446 /* Pods_circuito.framework */; };
 		FA0764591DCB1B24004D8E1A /* Property List Paradas.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA0764581DCB1B24004D8E1A /* Property List Paradas.plist */; };
 		FA07645B1DCB3B6E004D8E1A /* Property List Ruta Hosp.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA07645A1DCB3B6E004D8E1A /* Property List Ruta Hosp.plist */; };
+		FA19610A1DE55884009E89CA /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1961091DE55883009E89CA /* InfoViewController.swift */; };
+		FA19610C1DE558D9009E89CA /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA19610B1DE558D9009E89CA /* NavController.swift */; };
+		FA19610E1DE558ED009E89CA /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA19610D1DE558ED009E89CA /* TabController.swift */; };
 		FB061C6D1DE3D2AE00C21685 /* holanuevo.kml in Resources */ = {isa = PBXBuildFile; fileRef = FB061C6C1DE3D2AE00C21685 /* holanuevo.kml */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +41,9 @@
 		E003EBCF1E498589F44EC446 /* Pods_circuito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_circuito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0764581DCB1B24004D8E1A /* Property List Paradas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List Paradas.plist"; sourceTree = "<group>"; };
 		FA07645A1DCB3B6E004D8E1A /* Property List Ruta Hosp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List Ruta Hosp.plist"; sourceTree = "<group>"; };
+		FA1961091DE55883009E89CA /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		FA19610B1DE558D9009E89CA /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		FA19610D1DE558ED009E89CA /* TabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		FB061C6C1DE3D2AE00C21685 /* holanuevo.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = holanuevo.kml; sourceTree = "<group>"; };
 		FC901EC9C7D681334833049F /* Pods-circuito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-circuito.debug.xcconfig"; path = "Pods/Target Support Files/Pods-circuito/Pods-circuito.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +85,9 @@
 				33DE2A111DBF091B00D27B3A /* ViewController.swift */,
 				3383F1D21DCBE9D900A70DDC /* Globals.swift */,
 				33DE2A131DBF091B00D27B3A /* Main.storyboard */,
+				FA19610B1DE558D9009E89CA /* NavController.swift */,
+				FA19610D1DE558ED009E89CA /* TabController.swift */,
+				FA1961091DE55883009E89CA /* InfoViewController.swift */,
 				33DE2A271DBFD64900D27B3A /* LoginViewController.swift */,
 				33DE2A211DBFBB7D00D27B3A /* ParadasViewController.swift */,
 				33DE2A161DBF091B00D27B3A /* Assets.xcassets */,
@@ -239,9 +248,12 @@
 				33DE2A121DBF091B00D27B3A /* ViewController.swift in Sources */,
 				33DE2A101DBF091B00D27B3A /* AppDelegate.swift in Sources */,
 				3383F1D31DCBE9D900A70DDC /* Globals.swift in Sources */,
+				FA19610A1DE55884009E89CA /* InfoViewController.swift in Sources */,
 				33DE2A221DBFBB7D00D27B3A /* ParadasViewController.swift in Sources */,
 				33DE2A281DBFD64900D27B3A /* LoginViewController.swift in Sources */,
 				33DE2A241DBFBE5D00D27B3A /* AppController.swift in Sources */,
+				FA19610E1DE558ED009E89CA /* TabController.swift in Sources */,
+				FA19610C1DE558D9009E89CA /* NavController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
