@@ -44,6 +44,22 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
         
         
     }
+    override func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let currentVal = nav.selectedOption
+        super.pickerView(pickerView, didSelectRow: row, inComponent: component)
+        if currentVal == nav.selectedOption {
+            return
+        }
+        if nav.selectedOption == "Ruta Hospitales" {
+            path = Bundle.main.path(forResource: "Property List Ruta Hosp", ofType: "plist")
+        }
+        else{
+            path = Bundle.main.path(forResource: "Property List Paradas", ofType: "plist")
+        }
+        arrDictParadas = NSArray(contentsOfFile: path!)
+        myTableView.reloadData()
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

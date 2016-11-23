@@ -80,7 +80,7 @@ class ViewController: AppController, CLLocationManagerDelegate {
             c = UIColor.red
         }
         else{
-            coords = Globals.mapCoords
+            coords = Globals.rutaGzaSada
             c = UIColor.blue
         }
         for coord in coords {
@@ -105,14 +105,7 @@ class ViewController: AppController, CLLocationManagerDelegate {
         self.locationManager.stopUpdatingLocation()
         
     }
-
-    func makeRoutePath() -> GMSMutablePath {
-        let path = GMSMutablePath()
-        for coord in Globals.mapCoords{
-            path.add(CLLocationCoordinate2D(latitude: coord.1, longitude: coord.0))
-        }
-        return path
-    }
+    
     
     func buildStops () -> Void {
         var marker : GMSMarker
