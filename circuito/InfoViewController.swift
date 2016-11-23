@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {
+class InfoViewController: AppController {
     
     @IBOutlet weak var routeBtn: UIButton!
     override func viewDidLoad() {

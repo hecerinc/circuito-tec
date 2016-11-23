@@ -52,7 +52,7 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
         marker.snippet = "Campus Monterrey"
         marker.map = viewMap
         //buildStops()
-        uploadCircuito()
+        //uploadCircuito()
         barController = tabBarController?.viewControllers
         
         
