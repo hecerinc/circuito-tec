@@ -28,7 +28,6 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imaParada.isHidden = true
         
         if ruta == 1 { // ruta hospitales
             path = Bundle.main.path(forResource: "Property List Ruta Hosp", ofType: "plist")
@@ -137,13 +136,7 @@ class ParadasViewController: AppController, UITableViewDelegate, UITableViewData
         
     }
     
-    @IBAction func mostrarFoto(_ sender: UIButton) {
-        imaParada.isHidden = !imaParada.isHidden
-    }
-    
-    @IBAction func quitaFoto () {
-        imaParada.isHidden = true
-    }
+
     
     
     /*
