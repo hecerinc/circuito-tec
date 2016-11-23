@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PY1-Kl-ban">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PY1-Kl-ban">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -82,9 +82,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                         <state key="normal" title="Ruta Garza Sada"/>
-                                        <connections>
-                                            <action selector="routeBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lAi-eP-c7h"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.090196078430000007" green="0.40000000000000002" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -116,6 +113,7 @@
                         <outlet property="lbDireccion" destination="xYg-d7-rJh" id="E6d-fg-1FX"/>
                         <outlet property="lbNombre" destination="NsC-SG-ymO" id="FsW-KZ-lsb"/>
                         <outlet property="myTableView" destination="R8W-CI-bwF" id="L4Z-Ia-tW6"/>
+                        <outlet property="routeBtn" destination="DaI-V5-iAg" id="naP-8t-gA4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvc-JZ-5XN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -270,7 +268,6 @@
                     <connections>
                         <outlet property="routeBtn" destination="fGm-6r-RGM" id="CIm-0O-Evm"/>
                         <outlet property="routePicker" destination="Bm9-PM-BpX" id="LHN-jM-Tr0"/>
-                        <outlet property="rutaBtn" destination="fGm-6r-RGM" id="88r-lg-PjN"/>
                         <outlet property="viewMap" destination="miH-CI-yQ0" id="KZo-ZQ-qha"/>
                     </connections>
                 </viewController>
@@ -315,7 +312,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xmk-tp-QM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="382" y="775"/>
+            <point key="canvasLocation" x="382" y="795"/>
         </scene>
         <!--Mapa-->
         <scene sceneID="xjv-Aq-iLC">
