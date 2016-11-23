@@ -31,7 +31,10 @@ class ViewController: AppController, UIPickerViewDataSource, UIPickerViewDelegat
         routePicker.dataSource = self
         routePicker.delegate = self
         routePicker.backgroundColor = UIColor.white
-        self.view.addSubview(routePicker)
+        UIApplication.shared.keyWindow?.addSubview(routePicker)
+        //self.view.addSubview(routePicker)
+        //self.view.bringSubview(toFront: routePicker)
+        //self.navigationController?.view.addSubview(routePicker)
         // Do any additional setup after loading the view, typically from a nib.
         routeBtn.layer.cornerRadius = 4
         let camera = GMSCameraPosition.camera(withLatitude: 25.651783081997173, longitude: -100.2932983, zoom: 14.0)
