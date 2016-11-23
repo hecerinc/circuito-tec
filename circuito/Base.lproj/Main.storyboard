@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PY1-Kl-ban">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PY1-Kl-ban">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -459,6 +459,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="ASj-EU-hVh"/>
                     <connections>
+                        <outlet property="lbHMTime" destination="32W-dD-YWG" id="vUb-WS-U6a"/>
+                        <outlet property="lbHMTitle" destination="Zw7-oP-QD3" id="rOr-yC-Cof"/>
+                        <outlet property="lbHVTime" destination="C5S-vF-duc" id="Czl-jo-vsi"/>
+                        <outlet property="lbHVTitle" destination="Dgf-b6-URa" id="1iO-1L-1ow"/>
+                        <outlet property="lbNomRuta" destination="6EK-1x-ddq" id="T2a-NM-5a5"/>
                         <outlet property="routeBtn" destination="UkD-Gc-DGi" id="yYc-SP-3gC"/>
                     </connections>
                 </viewController>

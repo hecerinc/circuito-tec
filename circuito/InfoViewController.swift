@@ -10,11 +10,19 @@ import UIKit
 
 class InfoViewController: AppController {
     
-    //@IBOutlet weak var routeBtn: UIButton!
+    
+    @IBOutlet weak var lbNomRuta: UILabel!
+    @IBOutlet weak var lbHMTitle: UILabel!
+    @IBOutlet weak var lbHMTime: UILabel!
+    @IBOutlet weak var lbHVTitle: UILabel!
+    @IBOutlet weak var lbHVTime: UILabel!
+    
+    var sNomRuta : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Información"
-        // Do any additional setup after loading the view.
+        lbNomRuta.text = nav.selectedOption as! String!
     }
 
     override func didReceiveMemoryWarning() {
