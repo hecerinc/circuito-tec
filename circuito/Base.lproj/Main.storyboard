@@ -287,6 +287,7 @@
                         <segue destination="UdD-LX-B4W" kind="relationship" relationship="viewControllers" id="5Ur-Yq-MnI"/>
                         <segue destination="aYV-YJ-FhB" kind="relationship" relationship="viewControllers" id="4OE-br-1nl"/>
                         <segue destination="nvT-8E-1rw" kind="relationship" relationship="viewControllers" id="Llr-E1-TDe"/>
+                        <segue destination="dYP-Rl-Yw6" kind="relationship" relationship="viewControllers" id="maA-nS-wP3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35W-lR-FMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -300,7 +301,7 @@
                     <tabBarItem key="tabBarItem" title="Paradas" image="busStop" id="nJe-KM-Z9z"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="dxR-RC-pR3"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yFC-Vb-FAl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yFC-Vb-FAl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -319,7 +320,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aYV-YJ-FhB" customClass="NavController" customModule="circuito" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mapa" image="tracker" id="0vt-bp-NZk"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DYG-W8-Jfr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DYG-W8-Jfr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -469,15 +470,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcO-VL-nzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1472.8" y="-617.54122938530736"/>
+            <point key="canvasLocation" x="-561" y="-753"/>
         </scene>
         <!--Infomación-->
         <scene sceneID="V8J-KN-Cxu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UdD-LX-B4W" customClass="NavController" customModule="circuito" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Infomación" image="info" id="JJn-8q-OmF"/>
+                    <tabBarItem key="tabBarItem" title="Infomación" image="home-1" id="JJn-8q-OmF"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RA8-rJ-LGW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RA8-rJ-LGW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -488,6 +489,68 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iNo-w5-2eb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1652" y="-754"/>
+        </scene>
+        <!--Creditos View Controller-->
+        <scene sceneID="6o2-bX-T8N">
+            <objects>
+                <viewController id="wia-Br-Llk" customClass="CreditosViewController" customModule="circuito" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3ZI-Tq-xRm"/>
+                        <viewControllerLayoutGuide type="bottom" id="hCA-G5-I7r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RBH-x6-0YS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Créditos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGd-yy-rZh">
+                                <frame key="frameInset" minY="91" width="375" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="DYp-5T-n2R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <color key="textColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="22" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyb-wm-YJm">
+                                <frame key="frameInset" minX="16" minY="195" width="355" height="383"/>
+                                <string key="text">Circuito Tec ha sido desarrollado por estudiantes del Tecnológico de Monterrey durante el semestre Agosto Diciembre de 2016, como parte del curso Desarrollo de Aplicaciones para Dispositivos Móviles y asesorados por la maestra Yolanda Martínez Treviño.Desarrolladores:Eliás MeraHéctor RincónAna Karen BeltránCircuito Tec se distribuye como está de manera gratuita y se prohíbe su distribución y uso con fines de lucro.</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1215686275" green="0.36862745099999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xyb-wm-YJm" secondAttribute="trailing" id="4yi-gb-pac"/>
+                            <constraint firstItem="VGd-yy-rZh" firstAttribute="leading" secondItem="RBH-x6-0YS" secondAttribute="leading" id="8bO-tG-F9Z"/>
+                            <constraint firstAttribute="trailing" secondItem="VGd-yy-rZh" secondAttribute="trailing" id="Lea-zK-kH6"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Xyb-wm-YJm" secondAttribute="leading" id="vx7-yy-BGf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ldn-T3-MIR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KNt-v8-LC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472.8" y="-617.54122938530736"/>
+        </scene>
+        <!--Infomación-->
+        <scene sceneID="920-DW-rqP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dYP-Rl-Yw6" customClass="NavController" customModule="circuito" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Infomación" image="info" id="Gar-SY-QKA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="azg-J7-Sbc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wia-Br-Llk" kind="relationship" relationship="rootViewController" id="6uX-OF-N6V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XLy-eG-VOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="382" y="-618"/>
         </scene>
     </scenes>
@@ -495,6 +558,7 @@
         <image name="bg" width="640" height="1096"/>
         <image name="busStop" width="25" height="25"/>
         <image name="circuitoteclogo" width="1052" height="168"/>
+        <image name="home-1" width="25" height="25"/>
         <image name="info" width="25" height="25"/>
         <image name="tracker" width="25" height="25"/>
     </resources>
