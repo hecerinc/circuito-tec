@@ -50,8 +50,8 @@ class ViewController: AppController, CLLocationManagerDelegate {
         marker.title = "Tec de Monterrey"
         marker.snippet = "Campus Monterrey"
         marker.map = viewMap
-        //buildStops()
-        //uploadCircuito()
+        buildStops()
+        uploadCircuito()
         barController = tabBarController?.viewControllers
         
         
@@ -73,6 +73,7 @@ class ViewController: AppController, CLLocationManagerDelegate {
     }
     func drawNewRoute(route : String){
         
+        
         let Rpath = GMSMutablePath()
         var coords : [(Double, Double)]
         var c : UIColor
@@ -91,7 +92,7 @@ class ViewController: AppController, CLLocationManagerDelegate {
         polyLine.strokeWidth = 3.0
         polyLine.strokeColor = c
         polyLine.map = viewMap
-        
+        buildStops()
     }
     
     //Location Manager delegates
