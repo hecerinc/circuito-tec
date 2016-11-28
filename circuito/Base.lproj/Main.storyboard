@@ -473,11 +473,11 @@
             </objects>
             <point key="canvasLocation" x="-561" y="-753"/>
         </scene>
-        <!--Infomación-->
+        <!--Información-->
         <scene sceneID="V8J-KN-Cxu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UdD-LX-B4W" customClass="NavController" customModule="circuito" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Infomación" image="home-1" id="JJn-8q-OmF"/>
+                    <tabBarItem key="tabBarItem" title="Información" image="home-1" id="JJn-8q-OmF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RA8-rJ-LGW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
