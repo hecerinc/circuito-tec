@@ -207,8 +207,8 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="El Palmito" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpx-Xp-XsM">
-                                        <frame key="frameInset" minX="261" minY="31" width="80.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="El Borrego" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpx-Xp-XsM">
+                                        <frame key="frameInset" minX="256.5" minY="31" width="85" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -266,6 +266,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gbC-LW-XRp"/>
                     <connections>
+                        <outlet property="lbNomParada" destination="cpx-Xp-XsM" id="lEP-JC-FeQ"/>
                         <outlet property="routeBtn" destination="fGm-6r-RGM" id="SMh-jm-8sk"/>
                         <outlet property="viewMap" destination="miH-CI-yQ0" id="KZo-ZQ-qha"/>
                     </connections>

@@ -15,6 +15,7 @@ class ViewController: AppController, CLLocationManagerDelegate {
 
     //@IBOutlet weak var routeBtn: UIButton!
     
+    @IBOutlet weak var lbNomParada: UILabel!
     @IBOutlet weak var viewMap: GMSMapView!
     //var name = "Rutas"
     var locationManager = CLLocationManager()
